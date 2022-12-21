@@ -1,0 +1,1065 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing:border-box;
+}
+nav{
+	display: flex;
+	justify-content:space-around; 
+	align-items:center;
+	height:8vh;
+	/* background-color:burlywood; */
+	font-family:'Poppins',sans-serif;
+	position: relative;
+    z-index: 2;
+    
+
+}
+.logo{
+	color: rgb(225,225,225);
+	text-transform:uppercase;
+	letter-spacing:5px;
+	font-size:22px;
+    z-index: 2;
+}
+.nav-links{
+	display:flex;
+	/* background-color: red; */
+	position: relative;
+	justify-content: space-around;
+	width: 40%;
+	height:100%;
+    z-index: 2;
+}
+/* .imMez{
+    position: absolute;
+    z-index: 1;
+    transform: translateY(25px);
+    width: 100%;
+} */
+.nav-links li{
+	width: 25%;
+	height:100%;
+	background-color: #5d5d5d00;
+    border-right: #fff 1px solid;
+
+	position: relative;
+	list-style:none;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+
+}
+.nav-links a{
+	display: flex;
+	position: relative;
+	height: 100%;
+	text-decoration:none;
+	letter-spacing:3px;
+	font-weight:bold;
+	font-size:14px;
+	color:rgba(82, 63, 168, 0.712);
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+	
+}
+
+
+#menu1 :hover{
+	background-color: yellowgreen;
+    text-decoration: underline;
+}
+#menu1 :hover .burger-fleche div div{
+    background-color:white;
+}
+#menu1:hover a {
+    color:#fff;
+	text-decoration: underline;
+}
+#menu2 :hover{
+	background-color: yellow;
+    text-decoration: underline;
+}
+#menu2 :hover .burger-fleche div div{
+    background-color:white;
+}
+#menu2:hover a {
+    color:#fff;
+}
+#menu3 :hover{
+    text-decoration: underline;
+	background-color: slateblue;
+}
+#menu3 :hover .burger-fleche div div{
+    background-color:white;
+}
+#menu3:hover a {
+    color:#fff;
+}
+#menu4 :hover{
+    text-decoration: underline;
+	background-color: greenyellow;
+}
+#menu4 :hover .burger-fleche div div{
+    background-color:white;
+}
+#menu4:hover a {
+    color:#fff;
+}
+
+#menu1.active {
+    text-decoration: underline;
+    background-color: yellowgreen;
+
+}
+#menu1.active .burger-fleche div div{
+    background-color:white;
+}
+#menu1.active a {
+    color:#fff;
+}
+#menu2.active {
+    text-decoration: underline;
+    background-color: yellow;
+}
+#menu2.active .burger-fleche div div{
+    background-color:white;
+}
+#menu2.active a {
+    color:#fff;
+}
+#menu3.active {
+    text-decoration: underline;
+    background-color: slateblue;
+}
+#menu3.active .burger-fleche div div{
+    background-color:white;
+}
+#menu3.active a {
+    color:#fff;
+}
+#menu4.active {
+    background-color: greenyellow;
+}
+#menu4.active .burger-fleche div div{
+    background-color:white;
+}
+#menu4.active a {
+    color:#fff;
+}
+
+#menu1 .burger-fleche{
+    display: none;
+}
+#menu4 .burger-fleche{
+    display: none;
+}
+#menu5 {
+    display: none;
+}
+
+/* Pour la fleche montante et descendante */
+.burger-fleche{
+    display: flex;
+    cursor:pointer;
+    width: 15px; 
+    height: 10px; 
+    /* background-color: red; */
+	margin:0px;
+	padding:0px;
+	justify-content: space-around;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.burger-fleche-sous{
+    position: relative;
+    width :9px;
+    height: 3px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+
+}
+.burger-fleche div div{
+    position: absolute;
+    width :9px;
+    height: 3px;
+    background-color:rgba(82, 63, 168, 0.712);
+
+    border-radius: 50px;
+    
+}
+
+div.burger-fleche .line1{
+    transform: rotate(-135deg) translate(-4px,0px);
+}
+div.burger-fleche .line3{
+    transform: rotate(135deg) translate(4px,0px);
+}
+div.burger-fleche.toggle{
+	transform: rotate(180deg);
+}
+
+
+.burger{
+	display:none;
+	cursor:pointer;
+    width: 0px;
+}
+.burger div{
+	width:25px;
+	height: 3px;
+	margin: 5px;
+	background-color:rgb(226,226,226);
+	transition: all 0.5s ease;
+}
+
+/*  Pour les éléments constitutif du menu hors de la nav  */
+.item div.sous{
+    z-index: 1;
+    width: 100%;
+    min-height: 100%;
+    position:fixed;
+    top:0;
+    height: 0%;
+    visibility: hidden;
+    opacity:0 ;
+    text-align: center;
+    padding-top: 20px;
+    transition:all 0.5s ease-in-out;
+}
+#item1{
+    display: none;
+}
+
+.item div.sous.active{
+    visibility: visible;
+    opacity:1;
+    padding-top: 100px;
+    background: rgb(0,0,0,0.8);
+}
+
+/* Pour les éléments de item 1  */
+.tabs-menu{
+	position: relative;
+    display: flex;
+    width: 80%; 
+    height: 70%;
+    justify-content: center;
+	text-align: center;
+
+}
+.ss{
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.tabs-menu ul {
+
+    border: #fff 2px solid;
+    border-radius: 5px; 
+	display: flex;
+
+}
+.tabs-menu ul:hover{
+    border: greenyellow 2px solid ;   
+}
+.tabs-menu ul li{
+    list-style: none;
+    display: flex;
+}
+.tabs-menu ul li a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 175%;
+    margin: 15px;
+    color: #fff;
+}
+.tabs-menu ul li.active a{
+    color:greenyellow ;
+    text-decoration:underline ;
+}
+.tabs-menu ul li a:hover{
+    color:greenyellow ;
+    text-decoration:underline ;
+}
+
+
+
+/* Pour les sous-menu des sous-men du menu 1 */
+.sub-menus div img {
+	text-align: center;
+	opacity: 0;
+	width:400px ;
+	height: 350px;
+	transition: all 1s ease-in-out;
+}
+
+.sub-menu-im {
+    position: absolute;
+    /*top: 50%;   position the top  Edge of the element at the middle of the parent */
+    left: 50%; /* position the left Edge of the element at the middle of the parent */
+    transform: translate(-50%, 0%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+}
+.sub-menus{
+    justify-content: center;
+	position: relative;
+}
+.sub-menus div{
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.sub-menus div.vu{
+    opacity: 1;
+	height: auto;
+    flex-direction: column;
+    border-radius: 5px; 
+	transition: all 1s ease-in-out;
+}
+.sub-menus div.vu img {
+	opacity:1 ;
+    width:400px ;
+	height: 350px; 
+	transition: opacity 2s ease-in-out;
+}
+
+/* .sub-menus ul.vu:hover{
+    border:greenyellow 2px solid;
+
+} */
+
+/* .sub-menus ul li a{
+    text-decoration: none;
+    color:greenyellow;
+    font-size: 125%;
+
+} */
+
+/* .sub-menus ul li a:hover{
+    text-decoration: underline;
+} */
+
+
+
+
+/* Pour la création d'une map interactive */
+.map_image{
+    width: 50%;
+    float:left;
+}
+.map_image path{
+    fill: #fff;
+    stroke: black;
+    transition: fill 0.3s;
+}
+.map_image .is-active path{
+    fill: slateblue;
+    
+}
+.map_liste{
+    display: flex;
+    float: right;
+    width: 50%;
+    height: 70%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+.map_liste li{
+    list-style: none ;
+    min-height:11% ;
+}
+.map_liste a{
+    color:#fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 35px;
+}
+.map_liste a.is-active{
+    color:slateblue;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* Pour les elements du body */
+
+
+.tableau{
+	width: 75%;
+	background-color: rgba(0,0,0,0.1);
+	border: 3px solid #fFF;
+	border-radius: 10px;
+	margin: auto;
+    margin-top: 100px;
+	
+}
+
+.lgd{
+    position: absolute;
+    min-width: 100px;
+	border-collapse: collapse;
+	border: 2px  #5d5d5d;
+	border-radius: 5px;
+	background-color:  #5d5d5d;
+	padding: 8px;
+    transform: translate(40%, -50%);
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+
+div.projet{
+    margin: 25px;
+    border-radius: 5px;
+    background: rgba(0, 0,0 , 0.1);
+    position: relative;
+    max-width: 600px;
+
+}
+div.entete{
+   position: relative;
+   display: flex;
+   background-color: aquamarine;
+   border-radius: 5px 5px 0px 0px;
+   justify-content: space-between;
+}
+div.corps{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+div.titreProjet{
+    margin: 15px;
+}
+div.voirDescrip{
+    margin: 15px;
+}
+div.descrip{
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    height: 0px;
+    transition: all 0.5s ease-in-out;
+}
+div.descrip.show{
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 1;
+    height: auto;
+}
+div.client{
+    padding-top: 10px;
+    padding-left:20px ;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+div.pourcen{
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    height: 0px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    background-color: crimson;
+}
+div.pourcen.show{
+    height: auto;
+    opacity: 1;
+    font-style: italic;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    text-align: right;
+    border-radius: 0px 0px 5px 5px;
+}
+.burger-croix{
+    display: flex;
+    cursor:pointer;
+    width: 16px; 
+    height: 16px; 
+    /* background-color: red; */
+	margin:0px;
+	padding:0px;
+	justify-content: space-around;
+    transition: all 0.5s ease;
+}
+.burger-croix div{
+    position: absolute;
+    width :16px;
+    height: 4px;
+    background-color: rgba(0,0,0,0.8);
+}
+.burger-croix:hover div{
+    background-color: azure;
+}
+div.burger-croix .line1{
+    transform: rotate(90deg) translate(6px,0px);
+}
+div.burger-croix .line3{
+    transform: rotate(0deg) translate(0px,6px);
+}
+div.burger-croix.toggle{
+	transform: rotate(45deg);
+}
+
+
+
+/* Pour les elements du formulaire de projet */
+
+.container-mc{
+	max-width:380px;
+    max-height: 400px;
+	margin:auto;
+	margin-top:50px;
+	border-radius:10px ;
+	text-align: center;
+	padding:0px;
+	color:#fff;
+	box-sizing: border-box;
+}
+
+.container-mc-1{
+	padding: 25px;
+	background-color: #5d5d5d;
+	border-radius:10px 10px 0px 0px;
+	border:2px  #5d5d5d solid;
+
+}
+
+.container-mc-2{
+	background-color: #fff;
+	border:2px  #5d5d5d solid;
+
+}
+
+.container-mc-3{
+	
+	padding: 10px;
+	background-color: #5d5d5d;
+	border-radius:0px 0px 10px 10px;
+	border:2px  #5d5d5d solid;
+
+}
+
+.container-mc h2{
+	color: #fff;
+	text-align:center;
+	text-transform:capitalize;
+}
+
+.container-mc input{
+	width:100%;
+	margin: 10px 0;
+	outline:none;
+	background-color:transparent;
+	color:  #5d5d5d;
+	padding: 10px 6px;
+	font-size:18px;
+	font-weight:bold;
+	box-sizing:border-box;
+	border:none;
+	
+}
+
+.container-mc input:hover{
+	border-bottom:2px gray solid;
+	font-size:22px; 
+}
+
+.container-mc button{
+	width:80%;
+	border-radius: 5px;
+	border: none;
+	padding:10px;
+	color: #fff;
+	background-color: #5d5d5d ;
+	font-size:20px;
+	font-weight:bold;
+	outline:none;
+	cursor:pointer;
+}
+
+.container-mc button:hover{
+	font-size:24px;
+	color:  #5d5d5d;
+	background-color:#FFF ;
+}
+
+
+/* Pour les elements de la gestion du Diagramme de Gantt */
+
+form{
+    margin: 50px;
+    width: 50%;
+    position: relative;
+    border: #5d5d5d 2px solid;
+    border-radius: 10px;
+}
+.formNomT{
+	/* background-color: #5d5d5d; */
+    /* border:  #5d5d5d 2px solid; */
+    width: 100%;
+    height: 50PX;
+     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightblue;
+    color: blue;
+
+
+}
+.formDureeT{
+	/* background-color: #5d5d5d; */
+    border-top: #5d5d5d 2px solid;
+    /* border-left: #5d5d5d 2px solid;
+    border-right: #5d5d5d 2px solid; */
+    width: 100%;
+    height: 50pX;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+#boutonAjou{
+    position: relative;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 80px;
+    color: aliceblue;
+    background-color:  #5d5d5d;
+    border: #5d5d5d 2px solid;
+    cursor: pointer;
+    display: block;
+    margin: 10px;
+    font-size: larger;
+    left: 90%; 
+    transform: translate(-90%, 0%);
+    text-align: center;
+}
+#boutonAjou:hover{
+    color: #5d5d5d;
+    background-color:  aliceblue;
+}
+
+.lumen{
+    display: block;
+}
+.taches{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    
+}
+.tache{
+    
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    padding:8px;
+    border-radius: 10px;
+    background-color: aqua;
+}
+.tache div{
+    position: relative;
+    display:flex ;
+    height: 40px;
+    width: 250px;
+    padding: 4px;
+    margin-bottom: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    background-color: bisque;
+    border-radius: 5px;
+}
+.tache div.tachesAnt{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+.tache div.boutAjAnt{
+    cursor: pointer;
+}
+.tache div.boutAjAnt:hover {
+    background-color: #fFF;
+}
+.tache div.suppressionT{
+    margin-top: 8px;
+    cursor: pointer;
+}
+.tache div.suppressionT:hover {
+    background-color: #fFF;
+    
+    cursor: pointer;
+}
+.number{
+    width: 50px;
+}
+
+
+
+.boutDessin{
+    position: relative;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 300px;
+    color: aliceblue;
+    background-color: lightblue;
+    cursor: pointer;
+    display: block;
+    margin: 20px;
+    font-size: larger;
+    left: 50%; 
+    transform: translate(-50%, 0%);
+}
+
+/* pour le diagramme de Gantt */
+
+/* Pour les elements de la représentation du diagramme de Gantt */
+div.diagramme{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-left: black 3px solid;
+    border-bottom: black 3px solid;
+    display: block;
+    width: 800px;
+    height: 400px;
+    position: relative;
+    /*top: 50%;   position the top  Edge of the element at the middle of the parent */
+    left: 50%; /* position the left Edge of the element at the middle of the parent */
+    transform: translate(-50%, 0%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+
+
+}
+div.lg{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 400px;
+    justify-content: space-around;
+}
+div.lg div{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+div.posX{
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 400px; 
+}
+div.posX #posX{
+    height: 100%;
+    width: 1px;
+    background-color:rgba(255, 0, 0, 0.151);
+    border-right:white 1px solid ;
+    text-align: center;
+
+}
+#lg1{
+    background-color: rebeccapurple ;
+    animation: lg1 6s forwards;
+    height: 15px;
+    border-radius: 7px;
+}
+#lg2{
+    background-color: lightblue ;
+    animation: lg1 6s forwards;
+    height: 15px;
+    border-radius: 7px;
+}
+#lg3{
+    background-color: magenta ;
+    animation: lg1 6s forwards;
+    height: 15px;border-radius: 7px;
+}
+#lg4{
+    background-color: lawngreen ;
+    animation: lg1 6s forwards;
+    height: 15px;
+    border-radius: 7px;
+}
+#lg5{
+    background-color: gold ;
+    animation: lg1 6s forwards;
+    height: 15px;
+    border-radius: 7px;
+}
+#lg6{
+    background-color: greenyellow ;
+    animation: lg1 6s forwards;
+    height: 15px;
+    border-radius: 7px;
+}
+#lg7{
+    background-color: red ;
+    animation: lg1 6s forwards;
+    height: 15px;
+    border-radius: 7px;
+}
+
+@keyframes lg1 {
+    0%{
+        width: 0;
+        
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
+
+.leg{
+    position: relative;
+    display: block;
+    width: 800px;
+    margin-top: 20px;
+    /* background-color: gray; */
+        /*top: 50%;   position the top  Edge of the element at the middle of the parent */
+        left: 50%; /* position the left Edge of the element at the middle of the parent */
+        transform: translate(-50%, 0%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    
+}
+.legd{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+.legd div{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    border:  rgba(17, 8, 146, 0.541) 1px solid ;
+    border-radius: 15px;
+    background-color:rgba(255, 255, 0, 0.151);
+    display: flex;
+    margin: 15px;
+    align-items: center;
+}
+
+
+#legd0{
+    width: 50px;
+    height: 50px; 
+    border-radius: 10px;
+    background-color: rebeccapurple;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#legd1{
+    width: 50px;
+    height: 50px; 
+    border-radius: 15px;
+    background-color:lightblue ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#legd2{
+    width: 50px;
+    height: 50px; 
+    border-radius: 15px;
+    background-color: magenta;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#legd3{
+    width: 50px;
+    height: 50px; 
+    border-radius: 15px;
+    background-color: lawngreen;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#legd4{
+    width: 50px;
+    height: 50px; 
+    border-radius: 15px;
+    background-color: gold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#legd5{
+    width: 50px;
+    height: 50px; 
+    border-radius: 15px;
+    background-color: greenyellow;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#legd6{
+    width: 50px;
+    height: 50px; 
+    border-radius: 15px;
+    background-color: red ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#legd7{
+    width: 50px;
+    height: 50px; 
+    border-radius: 15px;
+    background-color: red;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+
+/* adaptation au forma mobile */
+
+@media screen and (max-width:1024px){
+	.nav-links{
+		width: 60%;
+	}
+    .tableau{
+        width: auto;
+        max-width: 98%;
+    }
+    form{
+        margin: 50px;
+        width: 70%;
+    }
+    div.diagramme{
+        width: 600px;
+        height: 400px;
+    
+    }
+    div.lg{
+        width: 600px;;
+        height: 400px;
+    }
+    div.posX{
+        width: 600px;
+        height: 400px;
+    }
+
+}
+@media screen and (max-width:768px){
+	body{
+		overflow-x:hidden;
+	}
+    .tableau{
+        width: auto;
+        max-width: 100%;
+    }
+    form{
+        margin: 10px;
+        width: 90%;
+    }
+
+	/* Pour les éléments de item 1  */
+	.tabs-menu ul li a{
+		font-size: 60%;
+		margin: 15px;
+		color: #fff;
+	}
+	.sub-menus div.vu img {
+		opacity:0 ;
+		
+	}
+	.nav-links{
+		position: absolute;
+		right:0px;
+		height:92vh;
+		top:8vh;
+		background-color: rgb(0,0,0,0.8);
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		width:0%;
+		transform:translateX(100%);
+		transition: all 1s ease-in-out;
+	}
+	.nav-links li{
+		opacity: 0;
+		width: 100%;
+	}
+	.burger{
+		display:block;
+        width: auto;
+	}
+    /* pour le diagramme de Gantt */
+    div.diagramme{
+        width: 350px;
+        height: 300px;
+    }
+    div.lg{
+        width: 350px;;
+        height: 300px;
+    }
+    div.posX{
+        width: 350px;
+        height: 300px;
+    }
+}
+
+.nav-active{
+	transform: translateX(0%);
+	width: 50%;
+}
+
+
+
+
+@keyframes navLinkFade{
+	
+	from{
+		opacity:0;
+		transform:translateX(50px);
+	}
+	to{
+		opacity:1;
+		transform:translateX(0px);
+	}
+}
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+	opacity: 0;
+}
+.toggle .line3{
+	transform: rotate(45deg )translate(-5px,-6px);
+}
